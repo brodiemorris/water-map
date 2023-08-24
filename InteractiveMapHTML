@@ -16,8 +16,8 @@
         let mOpened = d.getMonth();
 
 
-        var map =L.map('map').setView([51.505, -0.09], 13);
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        var map =L.map('map').setView([0, 0], 13);
+        L.tileLayer('https://i.ibb.co/HzJzgCp/LIA-Map-In-Season-34-125x24-2023-1.png', {
         maxZoom: 19,
         attribution: 'BETA, all detals subject to change. © OpenStreetMap'
         }).addTo(map);
