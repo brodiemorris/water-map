@@ -1,3 +1,5 @@
+https://leafletjs.com/examples/crs-simple/crs-simple.html
+
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -15,12 +17,12 @@
         let dOpened = d.getDay();
         let mOpened = d.getMonth();
 
-
-        var map =L.map('map').setView([0, 0], 13);
-        L.tileLayer('https://i.ibb.co/HzJzgCp/LIA-Map-In-Season-34-125x24-2023-1.png', {
-        maxZoom: 19,
-        attribution: 'BETA, all detals subject to change. © OpenStreetMap'
-        }).addTo(map);
+		var map = L.map('map', {
+    crs: L.CRS.Simple
+});
+var bounds = [[0,0], [480.0,682.5]];
+var image = L.imageOverlay('https://i.ibb.co/HzJzgCp/LIA-Map-In-Season-34-125x24-2023-1.png', bounds).addTo(map);
+map.fitBounds(bounds);
 
         var marker = L.marker([51.5, -0.09]).addTo(map);
 
@@ -32,9 +34,9 @@
         }).addTo(map);
         
         var polygon = L.polygon([
-    		[51.509, -0.08],
-    		[51.503, -0.06],
-    		[51.51, -0.047]
+    		[0, 0],
+    		[1,1],
+    		[-1,-1]
 		]).addTo(map);
         
         marker.bindPopup("<b>Main Entrance</b><br>Welcome to the Long Island Aquarium!").openPopup();
@@ -76,3 +78,4 @@
         #map {height: 1280px}
     </style>
 </body>
+
