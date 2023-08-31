@@ -49,6 +49,10 @@
         var slsWTxt = " 10:30, 12:30, 2:30";
         var slsWENDTxt =", 4:00";
         var slsTxt = "";
+        
+        //Salt Marsh Text
+        var openSaltMarsh = "An interactive marsh that allows guests to see species of crustaceans in their natural habitat and learn about them.";
+        var saltMarshTxt = "";
 
 
 
@@ -57,10 +61,11 @@
             slsTxt = slsWTxt+slsWENDTxt;
         	if (mOpened>= 6 && mOpened<=7){
             	totalSnorkTxt = snorkelTxt+snorkelDTxt+snorkelWTxt;
-
+				saltMarshTxt = openSaltMarsh;
             }
             else{
             	totalSnorkTxt = "Closed for the season."
+                saltMarshTxt = "Closed for the season."
             }
         }
         else if (dOpened == 1){
@@ -68,9 +73,11 @@
             slsTxt = slsWTxt;
         	if (mOpened>= 6 && mOpened<=7){
             	totalSnorkTxt = mSnorkelTxt+snorkelDTxt;
+                saltMarshTxt = openSaltMarsh;
             }
             else{
             	totalSnorkTxt = "Closed for the season."
+                saltMarshTxt = "Closed for the season."
             }
         }
         else if (dOpened == 2){
@@ -78,9 +85,11 @@
             slsTxt = slsWTxt;
         	if (mOpened>= 6 && mOpened<=7){
             	totalSnorkTxt = snorkelTxt+snorkelDTxt;
+                saltMarshTxt = openSaltMarsh;
             }
             else{
             	totalSnorkTxt = "Closed for the season."
+                saltMarshTxt = "Closed for the season."
             }
         
         }
@@ -89,9 +98,11 @@
             slsTxt = slsWTxt;
         	if (mOpened>= 6 && mOpened<=7){
             	totalSnorkTxt = snorkelTxt+snorkelDTxt;
+                saltMarshTxt = openSaltMarsh;
             }
             else{
             	totalSnorkTxt = "Closed for the season."
+                saltMarshTxt = "Closed for the season."
             }
         
         }
@@ -100,9 +111,11 @@
             slsTxt = slsWTxt;
         	if (mOpened>= 6 && mOpened<=7){
             	totalSnorkTxt = pSnorkelTxt+snorkelDTxt;
+                saltMarshTxt = openSaltMarsh;
             }
             else{
             	totalSnorkTxt = "Closed for the season."
+                saltMarshTxt = "Closed for the season."
             }
         
         }
@@ -111,9 +124,11 @@
             slsTxt = slsWTxt;
         	if (mOpened>= 6 && mOpened<=7){
             	totalSnorkTxt = mSnorkelTxt+snorkelDTxt;
+                saltMarshTxt = openSaltMarsh;
             }
             else{
             	totalSnorkTxt = "Closed for the season."
+                saltMarshTxt = "Closed for the season."
             }
         
         }        
@@ -137,7 +152,7 @@
             radius: 6,
             stroke: false
             }).addTo(map);
-        mangroveMonitor.bindPopup("<b>Mangrove Monitor</b>")
+        mangroveMonitor.bindPopup("<b>Mangrove Monitor</b><br>The mighty mangrove monitor loves to hide in the trees of his habitat. Can you find him?")
         
         var archerFish = L.circle([90.5, 289.5], {
         	fillOpacity: 0,
@@ -145,6 +160,14 @@
             stroke: false
             }).addTo(map);
         archerFish.bindPopup("<b>Chichlids</b><br>Small schooling fish including Archer Fish")
+        
+        //ADD CAPTION LATER
+        var gulfStreamRider = L.circle([167, 334], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        gulfStreamRider.bindPopup("<b>Gulf Stream Rider</b><br>")
         
         var amphibianAlley = L.circle([144, 353], {
         	fillOpacity: 0,
@@ -498,6 +521,36 @@
             stroke:false
             }).addTo(map);
         bees.bindPopup("<b>Bees</b><br>See a beehive from the inside to learn why these insects are important for the environment and unfortunately misunderstood.")
+        
+        var rehabPools = L.circle([184.75, 305.75], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        rehabPools.bindPopup("<b>Rehab Pools</b><br>View pools containing recently rescued animals as they are rehabilitated before being released back into the wild.")
+        
+        var researchLab = L.circle([164.25, 359.75], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        researchLab.bindPopup("<b>Research Lab</b><br>See the rescue center researchers as they research new ways to treat injuries in rescued animals, and how they can apply that to the rest of the world.")
+        
+        var saltMarsh = L.polygon([
+        	[347.5, 576.5],
+            [350.25, 614],
+            [385.75, 614.25],
+            [390.5, 579],
+            [367, 573.5]
+        ]).addTo(map);
+        saltMarsh.bindPopup("<b>Interactive Salt Marsh</b><br>"+saltMarshTxt)
+        
+        var informationCenter = L.circle([91.25, 357.25], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        informationCenter.bindPopup("<b>Information Center</b><br>Get information about events, exhibits, and more here.")
         
         
 
