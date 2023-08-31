@@ -566,6 +566,6 @@
     </script>
        
     <style>
-        #map {height: 1280px}
+        #map {height: 1700px}
     </style>
 </body>
