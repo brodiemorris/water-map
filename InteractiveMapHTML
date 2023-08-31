@@ -44,11 +44,17 @@
         var penguinWTxt = "1:15 & 3:00";
         var penguinWENDTxt = "3:30";
         var penguinSelfieTxt = "";
+        
+        //Sea Lion Show Text
+        var slsWTxt = " 10:30, 12:30, 2:30";
+        var slsWENDTxt =", 4:00";
+        var slsTxt = "";
 
 
 
         if(dOpened == 0|| dOpened == 6){
             penguinSelfieTxt = penguinWENDTxt;
+            slsTxt = slsWTxt+slsWENDTxt;
         	if (mOpened>= 6 && mOpened<=7){
             	totalSnorkTxt = snorkelTxt+snorkelDTxt+snorkelWTxt;
 
@@ -59,6 +65,7 @@
         }
         else if (dOpened == 1){
         	penguinSelfieTxt = penguinWTxt;
+            slsTxt = slsWTxt;
         	if (mOpened>= 6 && mOpened<=7){
             	totalSnorkTxt = mSnorkelTxt+snorkelDTxt;
             }
@@ -68,6 +75,7 @@
         }
         else if (dOpened == 2){
         	penguinSelfieTxt = penguinWTxt;
+            slsTxt = slsWTxt;
         	if (mOpened>= 6 && mOpened<=7){
             	totalSnorkTxt = snorkelTxt+snorkelDTxt;
             }
@@ -77,7 +85,8 @@
         
         }
         else if (dOpened == 3){
-        	penguinSelfieTxt = penguinWTxt;        
+        	penguinSelfieTxt = penguinWTxt;
+            slsTxt = slsWTxt;
         	if (mOpened>= 6 && mOpened<=7){
             	totalSnorkTxt = snorkelTxt+snorkelDTxt;
             }
@@ -87,7 +96,8 @@
         
         }
         else if (dOpened == 4){
-        	penguinSelfieTxt = penguinWTxt;        
+        	penguinSelfieTxt = penguinWTxt;
+            slsTxt = slsWTxt;
         	if (mOpened>= 6 && mOpened<=7){
             	totalSnorkTxt = pSnorkelTxt+snorkelDTxt;
             }
@@ -97,7 +107,8 @@
         
         }
         else if (dOpened == 5){
-        	penguinSelfieTxt = penguinWTxt;        
+        	penguinSelfieTxt = penguinWTxt;
+            slsTxt = slsWTxt;
         	if (mOpened>= 6 && mOpened<=7){
             	totalSnorkTxt = mSnorkelTxt+snorkelDTxt;
             }
@@ -338,7 +349,78 @@
             }).addTo(map);
         penguinEncounterRoom.bindPopup("<b>Penguin Encounter Room<b><br>Meet here for your Penguin Selfie ("+penguinSelfieTxt+")<br><strong>IMPORTANT: MEET BY TICKETING (NOT HERE) FOR YOUR PENGUIN ENCOUNTER</strong>")
         
+        var seaLionCol = L.circle([268.75, 433], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        seaLionCol.bindPopup("<b>Sea Lion Coliseum</b><br>Sea Lion Shows:"+slsTxt)
         
+        var reptileRuins = L.circle([318.25, 441.5], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        reptileRuins.bindPopup("<b>Ancient Reptile Ruins</b><br>A reptile house containing some exotic reptiles from around the globe!")
+        
+        var koiPond = L.circle([340.25, 461], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        koiPond.bindPopup("<b>Koi Pond</b><br>See many species of Koi, Japan's national fish. Grab some food from the vending machine close by to feed the fish yourself!")
+        
+        //They might still do critter photos but idk????
+        var critterCorner = L.circle([340.75, 434.5], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        critterCorner.bindPopup("<b>Critter Corner</b><br>Home to a variety of different exotic animals including an Albino Burmese Python, Red Tail Boa, and more!")
+        
+        //I think these times are right, but they don't match the website????
+        var otterFalls = L.circle([377, 406], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        otterFalls.bindPopup("<b>Otter Falls</b><br>Otter Talk and Feed: 1:30 & 3:30")
+        
+        var tourBoat = L.circle([428.75, 471.25], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        tourBoat.bindPopup("<b>Atlantis Explorer Tour boat</b><br>Take a ride down the Peconic River on the Tour Boat! Tickets available at The Boathouse or front ticketing area.")
+        
+        var eyeOpener = L.circle([410, 368.25], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        eyeOpener.bindPopup("<b>Eye Opener</b><br>Climb on the Eye Opener with its rope bridges and twisting slides, and learn about the local environment of the Peconic River as well!<br>$12 per child (also grants access to unlimited Rock Wall climbs), tickets available at The Boathouse or front ticketing area.")
+        
+        var rockWall = L.circle([431.5, 322], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        rockWall.bindPopup("<b>Rock Wall</b><br>Climb the rock wall and race to the top. Can you do it on the hardest side?<br>Tickets ($5 for 3 climbs, or $12 for unlimited climbs and access to the Eye Opener available at The Boathouse, Scoops Ice Cream, and the front ticketing area.")
+        
+        //They might do creature feature still idk?????
+        var critterCove = L.circle([349.25, 345], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        critterCove.bindPopup("<b>Critter Cove</b><br>Home of Lavender Brown, the Barred Owl")
+        
+        var barredOwl = L.circle([325.25, 328.25], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        barredOwl.bindPopup("<b>Barred Owl</b><br>Here you can meet the rescued Barred Owl, Lavender Brown. Be sure to stop in and say hello!")
         
         var snorkelTank = L.polygon([
     		[240, 302],
@@ -347,12 +429,77 @@
             [308.25, 311.5],
             [292, 302]
 		]).addTo(map);
-
+		
+		var snorkViewPlat = L.circle([257.75, 343], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        snorkViewPlat.bindPopup("<b>Snorkel Viewing Platform</b><br>View the snorkel adventures from above here.")
         
-       
-
-
-
+        var snowMonkeys = L.circle([254.75, 368], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        snowMonkeys.bindPopup("<b>Japanese Snow Monkeys</b><br>See the Japanese Snow Monkeys roam the Lost Temple of Atlantis in all their glory!")
+        
+        var porcupines = L.circle([314.5, 365.25], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        porcupines.bindPopup("<b>Porcupines</b><br>Watch the prehensile tailed porcupines as they climb around their dark habitat. Be careful not to disturb them with any bright lights!")
+        
+        var jjMiningCo = L.circle([325, 398.25], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        jjMiningCo.bindPopup("<b>J&J Mining Co.</b><br>Sift through some sand and become an archaeologist as you search for treasures buried deep.")
+        
+        //ADD DESCR LATER
+        var butterflyLab = L.circle([139, 244], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        butterflyLab.bindPopup("<b>Butterfly Lab</b><br>")
+        
+        var bugs1 = L.circle([168.25, 234.25], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        var bugs2 = L.circle([186, 224], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        var bugs3 = L.circle([119.5, 213], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        bugs1.bindPopup("<b>Bugs</b><br>A variety of exotic bugs from around the world of various species.")
+        bugs2.bindPopup("<b>Bugs</b><br>A variety of exotic bugs from around the world of various species.")
+        bugs3.bindPopup("<b>Bugs</b><br>A variety of exotic bugs from around the world of various species.")
+        
+        var butterflies = L.circle([163, 199], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        butterflies.bindPopup("<b>Butterflies</b><br>A must-see, open air area filled with many species of butterflies! Admission (the stamp on your left hand) is included with general admission!")
+        
+        var bees = L.circle([110.25, 191.5], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        bees.bindPopup("<b>Bees</b><br>See a beehive from the inside to learn why these insects are important for the environment and unfortunately misunderstood.")
+        
+        
 
 		var entranceMark = L.popup()
     		.setLatLng([100, 340])
