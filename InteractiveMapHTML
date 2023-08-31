@@ -32,7 +32,80 @@
 		var image = L.imageOverlay('https://i.ibb.co/HzJzgCp/LIA-Map-In-Season-34-125x24-2023-1.png', 				bounds).addTo(map);
 		map.fitBounds(bounds);
         
+        //Snorkel Text
+        let mSnorkelTxt = "($) Mermaid Snorkels @";
+        let pSnorkelTxt = "($) Pirate Snorkels @";
+        let snorkelTxt = "($) Snorkel Adventures @";
+        let snorkelDTxt= " 10:30, 11:45, 1:30, 2:45";
+        let snorkelWTxt= ", 4:00";
+        let totalSnorkTxt = "";
         
+        //Penguin Selfie Text
+        var penguinWTxt = "1:15 & 3:00";
+        var penguinWENDTxt = "3:30";
+        var penguinSelfieTxt = "";
+
+
+
+        if(dOpened == 0|| dOpened == 6){
+            penguinSelfieTxt = penguinWENDTxt;
+        	if (mOpened>= 6 && mOpened<=7){
+            	totalSnorkTxt = snorkelTxt+snorkelDTxt+snorkelWTxt;
+
+            }
+            else{
+            	totalSnorkTxt = "Closed for the season."
+            }
+        }
+        else if (dOpened == 1){
+        	penguinSelfieTxt = penguinWTxt;
+        	if (mOpened>= 6 && mOpened<=7){
+            	totalSnorkTxt = mSnorkelTxt+snorkelDTxt;
+            }
+            else{
+            	totalSnorkTxt = "Closed for the season."
+            }
+        }
+        else if (dOpened == 2){
+        	penguinSelfieTxt = penguinWTxt;
+        	if (mOpened>= 6 && mOpened<=7){
+            	totalSnorkTxt = snorkelTxt+snorkelDTxt;
+            }
+            else{
+            	totalSnorkTxt = "Closed for the season."
+            }
+        
+        }
+        else if (dOpened == 3){
+        	penguinSelfieTxt = penguinWTxt;        
+        	if (mOpened>= 6 && mOpened<=7){
+            	totalSnorkTxt = snorkelTxt+snorkelDTxt;
+            }
+            else{
+            	totalSnorkTxt = "Closed for the season."
+            }
+        
+        }
+        else if (dOpened == 4){
+        	penguinSelfieTxt = penguinWTxt;        
+        	if (mOpened>= 6 && mOpened<=7){
+            	totalSnorkTxt = pSnorkelTxt+snorkelDTxt;
+            }
+            else{
+            	totalSnorkTxt = "Closed for the season."
+            }
+        
+        }
+        else if (dOpened == 5){
+        	penguinSelfieTxt = penguinWTxt;        
+        	if (mOpened>= 6 && mOpened<=7){
+            	totalSnorkTxt = mSnorkelTxt+snorkelDTxt;
+            }
+            else{
+            	totalSnorkTxt = "Closed for the season."
+            }
+        
+        }        
         
 		//Popups for each exhibit's bubble
         var sharkTank = L.circle([163, 588], {
@@ -251,6 +324,20 @@
             }).addTo(map);
         seals.bindPopup("<b>Seals</b><br>Harbor and Grey seals welcome our visitors to the Long Island Aquarium.<br>Get up close and personal with the seals in a Seal encounter! Inquire at our information center for more info.")
         
+        var penguinPavillion = L.circle([313.25, 619], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+       penguinPavillion.bindPopup("<b>Penguin Pavillion</b><br>Penguin Talk & Feed: 10:15 & 2:00<br>See the African Penguins as they walk and swim around their habitat. Get an up close and personal look at the penguins with the observation bubble!<br>Make your special day one to remember with a penguin selfie or encounter! Inquire at our information center.")
+       
+       	var penguinEncounterRoom = L.circle([267.75, 609], {
+       		fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        penguinEncounterRoom.bindPopup("<b>Penguin Encounter Room<b><br>Meet here for your Penguin Selfie ("+penguinSelfieTxt+")<br><strong>IMPORTANT: MEET BY TICKETING (NOT HERE) FOR YOUR PENGUIN ENCOUNTER</strong>")
+        
         
         
         var snorkelTank = L.polygon([
@@ -263,33 +350,8 @@
 
         
        
-        //Snorkel Text
-        let mSnorkelTxt = "($) Mermaid Snorkels @";
-        let pSnorkelTxt = "($) Pirate Snorkels @";
-        let snorkelTxt = "($) Snorkel Adventures @";
-        let snorkelDTxt= " 10:30, 11:45, 1:30, 2:45";
-        let snorkelWTxt= ", 4:00";
-        let totalSnorkTxt = "";
 
 
-		//In season text logic
-        if (mOpened>= 6 && mOpened<=7){
-            if(dOpened == 2){
-                totalSnorkTxt = snorkelTxt+snorkelDTxt;
-            }
-            else if(dOpened == 0|| dOpened == 6){
-                totalSnorkTxt = snorkelTxt+snorkelDTxt+snorkelWTxt;
-            }
-            else if (dOpened == 4){
-                totalSnorkTxt = pSnorkelTxt+snorkelDTxt;
-            }
-            else{
-                totalSnorkTxt = mSnorkelTxt+snorkelDTxt;
-            }
-        }
-        else{
-            totalSnorkTxt = "Closed for the season."
-        }
 
 
 		var entranceMark = L.popup()
