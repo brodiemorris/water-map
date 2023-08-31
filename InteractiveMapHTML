@@ -19,36 +19,251 @@
     	crs: L.CRS.Simple
 		});
         
-		var bounds = [[0,0], [480.0,682.5]];
-		var image = L.imageOverlay('https://i.ibb.co/HzJzgCp/LIA-Map-In-Season-34-125x24-2023-1.png', 				bounds).addTo(map);
-		map.fitBounds(bounds);
-
-        var entranceMark = L.marker([100, 340]).addTo(map);
-
-        var sharkTank = L.circle([163, 588], {
-            color: 'red',
-            fillColor: '#f03',
-            fillOpacity: 0.2,
-            radius: 34.5
-        }).addTo(map);
         
-        var polygon = L.polygon([
-    		[0, 0],
-    		[1,1],
-    		[-1,-1]
-		]).addTo(map);
-        
+        //Debugging code DELETE LATER
         function onMapClick(e) {
-    		alert("You clicked the map at " + e.latlng);
+    		alert(e.latlng);
 		}
 
 		map.on('click', onMapClick);
         
-        entranceMark.bindPopup("<b>Main Entrance</b><br>Welcome to the Long Island Aquarium!").openPopup();
+        
+		var bounds = [[0,0], [480.0,682.5]];
+		var image = L.imageOverlay('https://i.ibb.co/HzJzgCp/LIA-Map-In-Season-34-125x24-2023-1.png', 				bounds).addTo(map);
+		map.fitBounds(bounds);
+        
+        
+        
+		//Popups for each exhibit's bubble
+        var sharkTank = L.circle([163, 588], {
+            fillOpacity: 0,
+            radius: 34.5,
+            stroke: false
+        }).addTo(map);
+        
+        var rayBay = L.circle([124.5, 290.5], {
+        	fillOpacity: 0,
+            radius: 6,
+            stroke: false
+        }).addTo(map);
+        rayBay.bindPopup("<b>Ray Bay</b><br>Ray Bay talk and feed: 11:30<br>An interactive touch tank with many species of rays! Food avaiable ($3) at ticketing or Posiedon's Crafts.")
+        
+        var mangroveMonitor = L.circle([94.5, 274], {
+        	fillOpacity: 0,
+            radius: 6,
+            stroke: false
+            }).addTo(map);
+        mangroveMonitor.bindPopup("<b>Mangrove Monitor</b>")
+        
+        var archerFish = L.circle([90.5, 289.5], {
+        	fillOpacity: 0,
+            radius: 6,
+            stroke: false
+            }).addTo(map);
+        archerFish.bindPopup("<b>Chichlids</b><br>Small schooling fish including Archer Fish")
+        
+        var amphibianAlley = L.circle([144, 353], {
+        	fillOpacity: 0,
+            radius: 6,
+            stroke: false
+            }).addTo(map);
+        amphibianAlley.bindPopup("<b>Amphibian Alley</b><br>Frogs, Axolotls, and more!")
+        
+        var turtleBay = L.circle([135, 381], {
+        	fillOpacity: 0,
+            radius: 6,
+            stroke: false
+            }).addTo(map);
+        turtleBay.bindPopup("<b>Turtle Bay</b><br>Feed the turtles! Food ($2) available at ticketing or Posiedon's Crafts.")
+        
+        var lagoon = L.circle([92.5, 385.5], {
+        	fillOpacity: 0,
+            radius: 6,
+            stroke: false
+            }).addTo(map);
+        lagoon.bindPopup("<b>The Lagoon</b><br>Lagoon Lecture: 1:30<br>See many different species of fish from all across long island!<br>Food ($3) available at ticketing or Posiedon's Crafts.")
+        
+        var tidalMarsh = L.circle([156, 422], {
+        	fillOpacity:0,
+            radius: 6,
+            stroke: false
+            }).addTo(map);
+        tidalMarsh.bindPopup("<b>Tidal Marsh</b><br>Home to 15 species of local animals that all reside in tidal marshes.")
+        
+        var crabVilla = L.circle([178, 440], {
+        	fillOpacity:0,
+            radius: 6,
+            stroke: false
+            }).addTo(map);
+        crabVilla.bindPopup("<b>Crab Villa</b><br>Home to many species of crustacean including the Japenese Spider Crab.")
+        
+        var jellyfish = L.circle([168.5, 474.5], {
+        	fillOpacity:0,
+            radius: 6,
+            stroke: false
+            }).addTo(map);
+        jellyfish.bindPopup("<b>Jellyfish</b><br>See the mezmerizing Moon Jellyfish in all their glory!")
+        
+        var shipwreckTouchTank = L.circle([145.5, 477], {
+        	fillOpacity:0,
+            radius: 6,
+            stroke: false
+            }).addTo(map);
+        shipwreckTouchTank.bindPopup("<b>Shipwreck Touch Tank</b><br>An interactive touch tank containing different species of crab, shellfish, and more!")
+        
+        var oldWorldWonders = L.circle([133, 483.5], {
+        	fillOpacity:0,
+            radius: 6,
+            stroke: false
+            }).addTo(map);
+        oldWorldWonders.bindPopup("<b>Old World Wonders</b><br>A tank containing exotic fish, turtles, and eels from Africa, Europe, and Asia.")
+        
+        var bestBuddies = L.circle([104, 508], {
+        	fillOpacity:0,
+            radius: 6,
+            stroke: false
+            }).addTo(map);
+        bestBuddies.bindPopup("<b>Best Buddies</b><br>See the symbiotic relationship of Clownfish and Sea Anemones in action.")
+        
+        var piranha = L.circle([102, 530.5], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+        	}).addTo(map);
+        piranha.bindPopup("<b>Piranha</b><br>See the often misunderstood red-bellied piranhas in action.")
+        
+        var shipwreck = L.circle([104, 547.5], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        shipwreck.bindPopup("<b>Shipreck/Artificial Reef</b><br>See many species of fish commonly found in or around shipwrecks in the wild.")
+        
+        var discusFish = L.circle([103.5, 567.5], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        discusFish.bindPopup("<b>Discus Fish</b><br>See the beauty of the colorful wonder of discus fish!")
+        
+        var localRockyShores = L.circle([117, 595.5], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        localRockyShores.bindPopup("<b>Local Rocky Shores</b><br>See the local plant and fish life that inhabit the local shores of Long Island, including live microalgae.")
+        
+        var amazonRainforest = L.circle([209, 553.5], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        amazonRainforest.bindPopup("<b>Amazon Rainforest</b><br>See the diverse species of fish and turtles that live in the lush Amazon Rainforest!")
+        
+        var coralReef = L.circle([210, 520.5], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        coralReef.bindPopup("<b>Coral Reef</b><br>Experience one of the largest all-living, closed-system coral reef habitats in the Western hemisphere!")
+        
+        var formAndFunction = L.circle([199, 494], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        formAndFunction.bindPopup("<b>Form and Function</b><br>Using a magnified viewing window, observe how some of the stranger body-shapes of fish change how they live their lives!")
+        
+        var pufferFish = L.circle([187.75, 494.25], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+       pufferFish.bindPopup("<b>Puffer Fish</b><br>See different species of the fish known for their inflating defense mechanism!")
+       
+		var flounderFind = L.circle([176, 494.5], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        flounderFind.bindPopup("<b>Flounder Find</b><br>Try and find the flounders as they camoflougue against the sand. Can you find them all?")
+        
+        var cuttlefish = L.circle([164.5, 498.75], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        cuttlefish.bindPopup("<b>Cuttlefish</b><br>See the cuttlefish as they float around changing color to blend in with their surroundings.")
+        
+        var electricEel = L.circle([154.5, 498.75], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        electricEel.bindPopup("<b>Electric Eel</b><br>See the eel famous for their shocking defense mechanism! (See what I did there?)")
+        
+        var octopus = L.circle([146, 493.5], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        octopus.bindPopup("<b>Giant Pacific Octopus</b><br>Watch carefully, and you might see the Giant Pacific Octopus changing color using its specialized skin cells.")
+        
+        var seahorses = L.circle([184.75, 512.5], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        seahorses.bindPopup("<b>Seahorses</b><br>See species of Seahorses and Sea Snails that can be found locally on Long Island in a habitat that simulates their natural environment!")
+        
+        var megalodonDisplay = L.circle([123.75, 618.5], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        megalodonDisplay.bindPopup("<b>Megalodon Display</b><br>Witness the immense size of the Megalodon in this display!")
+        
+        var schoolingFish = L.circle([129, 646], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        schoolingFish.bindPopup("<b>Schooling Fish</b><br>Observe the schooling behavior of fish, and see how it avoids predators.")
+        
+        var treasureRoom = L.circle([189.75, 651.75], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        treasureRoom.bindPopup("<b>Poseidon's Treasure Room</b><br>See a rotating set of small habitats containing unusual marine creatures.")
+        
+        var marmosets = L.circle([200.25, 646.75], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        marmosets.bindPopup("<b>Geoffroy's Marmosets</b><br>See the small South American primates, famous for their white puffed cheeks, face, and neck.")
+        
+        var seals = L.circle([61.75, 379.75], {
+        	fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        seals.bindPopup("<b>Seals</b><br>Harbor and Grey seals welcome our visitors to the Long Island Aquarium.<br>Get up close and personal with the seals in a Seal encounter! Inquire at our information center for more info.")
+        
+        
+        
+        var snorkelTank = L.polygon([
+    		[240, 302],
+    		[240, 334.5],
+    		[308.25, 334.5],
+            [308.25, 311.5],
+            [292, 302]
+		]).addTo(map);
 
-        sharkTank.bindPopup("<b>Lost City of Atlantis Shark Exhibit</b><br>Shark Tank Talk (Feed M Th Sa) 3:00")
-
-        //Changes text under "snorkel tank" to what would be available during that week
+        
+       
+        //Snorkel Text
         let mSnorkelTxt = "($) Mermaid Snorkels @";
         let pSnorkelTxt = "($) Pirate Snorkels @";
         let snorkelTxt = "($) Snorkel Adventures @";
@@ -56,6 +271,8 @@
         let snorkelWTxt= ", 4:00";
         let totalSnorkTxt = "";
 
+
+		//In season text logic
         if (mOpened>= 6 && mOpened<=7){
             if(dOpened == 2){
                 totalSnorkTxt = snorkelTxt+snorkelDTxt;
@@ -74,8 +291,15 @@
             totalSnorkTxt = "Closed for the season."
         }
 
-        polygon.bindPopup("<b>Shark Reef Lagoon</b><br>"+totalSnorkTxt);
 
+		var entranceMark = L.popup()
+    		.setLatLng([100, 340])
+    		.setContent("<b>Main Entrance</b><br>Welcome to the Long Island Aquarium!<br>Click on any colored circles to learn more about our exhibits!")
+    		.openOn(map);
+
+        sharkTank.bindPopup("<b>Lost City of Atlantis Shark Exhibit</b><br>Shark Tank Talk (Feed M Th Sa) 3:00")
+
+        snorkelTank.bindPopup("<b>Shark Reef Lagoon</b><br>"+totalSnorkTxt);
 
     </script>
        
