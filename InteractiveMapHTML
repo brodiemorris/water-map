@@ -137,7 +137,7 @@
         var sharkTank = L.circle([163, 588], {
             fillOpacity: 0,
             radius: 34.5,
-            stroke: false
+            stroke: false,
         }).addTo(map);
         
         var rayBay = L.circle([124.5, 290.5], {
@@ -548,7 +548,7 @@
         var informationCenter = L.circle([91.25, 357.25], {
         	fillOpacity:0,
             radius:6,
-            stroke:false
+            stroke:false,
             }).addTo(map);
         informationCenter.bindPopup("<b>Information Center</b><br>Get information about events, exhibits, and more here.")
         
@@ -559,13 +559,13 @@
     		.setContent("<b>Main Entrance</b><br>Welcome to the Long Island Aquarium!<br>Click on any colored circles to learn more about our exhibits!")
     		.openOn(map);
 
-        sharkTank.bindPopup("<b>Lost City of Atlantis Shark Exhibit</b><br>Shark Tank Talk (Feed M Th Sa) 3:00")
+        sharkTank.bindPopup("<b>Lost City of Atlantis Shark Exhibit</b><p>Shark Tank Talk (Feed M Th Sa) 3:00</p>")
 
         snorkelTank.bindPopup("<b>Shark Reef Lagoon</b><br>"+totalSnorkTxt);
-
     </script>
        
     <style>
-        #map {height: 1700px}
+        #map {height: 2100px}
+        div {font-size: 120%;}
     </style>
 </body>
