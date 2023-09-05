@@ -73,6 +73,7 @@
         //Shark Text
         var sharkTalk = " Talk: 3:00"
         var sharkFeed = " Feed: 3:00"
+        var sharkDive = "<br>($) Shark Dive: 11:00. Inquire at our information center to learn more."
         var sharkTxt = ""
 
         //Coati Text
@@ -101,7 +102,7 @@
         porcupineTxt = ""
 
         //Seal Text
-        sealTxt = ""
+        sealTxt = ""    
 
 
         if(dOpened == 0){
@@ -110,6 +111,7 @@
             critterTxt = creatureFeature;
             amazonTxt = amazonFeed;
             sharkTxt = sharkTalk;
+            sharkTxt = sharkTxt+sharkDive;
             bugTxt = bugEnc;
             eyeOpPrice = eyeOpenSumm;
             paintTxt = paintSun;
@@ -131,6 +133,7 @@
             critterTxt = creatureFeature;
             amazonTxt = amazonTalk;
             sharkTxt = sharkFeed;
+            sharkTxt = sharkTxt+sharkDive;
             bugTxt = bugEnc;
             eyeOpPrice = eyeOpenSumm;
             if (mOpened>= 6 && mOpened<=7){
@@ -150,6 +153,7 @@
             critterTxt = critterPhoto;
             amazonTxt = amazonTalk;
             sharkTxt = sharkFeed;
+            sharkTxt = sharkTxt+sharkDive;
             paintTxt = paintMon;
             porcupineTxt = "<br>($) Porcupine connection: 12:30. Inquire at our information center to learn more."
         	if (mOpened>= 6 && mOpened<=7){
@@ -178,6 +182,7 @@
                 bugTxt = bugEnc;
                 rockWallTxt = rockOpen;
                 eyeOpPrice = eyeOpenSumm;
+                sharkTxt = sharkTxt+sharkDive;
             }
             else{
                 eyeOpPrice = eyeOpenFree;
@@ -199,6 +204,7 @@
                 bugTxt = bugEnc;
                 rockWallTxt = rockOpen;
                 eyeOpPrice = eyeOpenSumm;
+                sharkTxt = sharkTxt+sharkDive;
             }
             else{
                 eyeOpPrice = eyeOpenFree;
@@ -214,6 +220,7 @@
             critterTxt = critterPhoto;
             amazonTxt = amazonTalk;
             sharkTxt = sharkFeed;
+            sharkTxt = sharkTxt+sharkDive;
         	if (mOpened>= 6 && mOpened<=7){
             	totalSnorkTxt = pSnorkelTxt+snorkelDTxt;
                 saltMarshTxt = openSaltMarsh;
@@ -236,6 +243,7 @@
             critterTxt = creatureFeature;
             piranhaTxt = piranhaFeed;
             sharkTxt = sharkTalk;
+            sharkTxt = sharkTxt+sharkDive;
             coatiTxt = coatiConn;
         	if (mOpened>= 6 && mOpened<=7){
             	totalSnorkTxt = mSnorkelTxt+snorkelDTxt;
