@@ -49,86 +49,206 @@
         var slsWTxt = " 10:30, 12:30, 2:30";
         var slsWENDTxt =", 4:00";
         var slsTxt = "";
+        var sleTxt = "<br>($) Sea Lion Encounter: 10:00. Inquire at our information center to learn more."
         
         //Salt Marsh Text
         var openSaltMarsh = "An interactive marsh that allows guests to see species of crustaceans in their natural habitat and learn about them.";
         var saltMarshTxt = "";
 
+        //Critter Text
+        //See if seasonal
+        var critterPhoto = "($) Critter Photos: 11:30 & 2:30<br>"
+        var creatureFeature = "Creature Feature: 12:15<br>"
+        var critterTxt = ""
+
+        //Amazon Text
+        var amazonTalk = "Amazon Lecture: 3:30<br>"
+        var amazonFeed = "Amazon Lecture & Feed: 3:30<br>"
+        var amazonTxt = ""
+
+        //Piranha Text
+        var piranhaFeed = "Piranha Feed & Lecture: 3:30<br>"
+        var piranhaTxt = ""
+
+        //Shark Text
+        var sharkTalk = " Talk: 3:00"
+        var sharkFeed = " Feed: 3:00"
+        var sharkTxt = ""
+
+        //Coati Text
+        var coatiConn = "<br>($) Coati Connection: 12:30. Inquire at our visitor's center to learn more."
+        var coatiTxt = ""
+
+        //Bug Text
+        var bugEnc = "<br>($) Bug Encounter: 1:00. Tickets available at the front ticketing area."
+        var bugTxt = ""
+
+        //Rock Wall Text
+        var rockOpen = "Climb the rock wall and race to the top. Can you do it on the hardest side?<br>Tickets ($5 for 3 climbs, or $12 for unlimited climbs and access to the Eye Opener available at The Boathouse, Scoops Ice Cream, and the front ticketing area."
+        var rockWallTxt = ""
+
+        //Eye Opener Text
+        var eyeOpenSumm = "$12 per child (also grants access to unlimited Rock Wall climbs), tickets available at The Boathouse or front ticketing area."
+        var eyeOpenFree = "Free Today!"
+        var eyeOpPrice = ""
+
+        //Painting Text
+        var paintSun = "<br> ($) Painting with Pinnipeds: 3:45. Take home a one-of-a-kind painting created by one of our very own Sea Lions before your very eyes!"
+        var paintMon = "<br> ($) Painting with Pinnipeds: 10:15. Take home a one-of-a-kind painting created by one of our very own Sea Lions before your very eyes!"
+        var paintTxt = ""
+
+        //Porcupine Text
+        porcupineTxt = ""
+
+        //Seal Text
+        sealTxt = ""
 
 
-        if(dOpened == 0|| dOpened == 6){
+        if(dOpened == 0){
             penguinSelfieTxt = penguinWENDTxt;
             slsTxt = slsWTxt+slsWENDTxt;
+            critterTxt = creatureFeature;
+            amazonTxt = amazonFeed;
+            sharkTxt = sharkTalk;
+            bugTxt = bugEnc;
+            eyeOpPrice = eyeOpenSumm;
+            paintTxt = paintSun;
+            sealTxt = "($) Seal Encounter: 10:30. Inquire at our information center to learn more."
         	if (mOpened>= 6 && mOpened<=7){
             	totalSnorkTxt = snorkelTxt+snorkelDTxt+snorkelWTxt;
 				saltMarshTxt = openSaltMarsh;
+                rockWallTxt = rockOpen;
             }
             else{
             	totalSnorkTxt = "Closed for the season."
                 saltMarshTxt = "Closed for the season."
+                rockWallTxt = "Closed for the season."
+            }
+        }
+        else if(dOpened == 6){
+            penguinSelfieTxt = penguinWENDTxt;
+            slsTxt = slsWTxt+slsWENDTxt;
+            critterTxt = creatureFeature;
+            amazonTxt = amazonTalk;
+            sharkTxt = sharkFeed;
+            bugTxt = bugEnc;
+            eyeOpPrice = eyeOpenSumm;
+            if (mOpened>= 6 && mOpened<=7){
+            	totalSnorkTxt = snorkelTxt+snorkelDTxt+snorkelWTxt;
+				saltMarshTxt = openSaltMarsh;
+                rockWallTxt = rockOpen;
+            }
+            else{
+            	totalSnorkTxt = "Closed for the season."
+                saltMarshTxt = "Closed for the season."
+                rockWallTxt = "Closed for the season."
             }
         }
         else if (dOpened == 1){
         	penguinSelfieTxt = penguinWTxt;
             slsTxt = slsWTxt;
+            critterTxt = critterPhoto;
+            amazonTxt = amazonTalk;
+            sharkTxt = sharkFeed;
+            paintTxt = paintMon;
+            porcupineTxt = "<br>($) Porcupine connection: 12:30. Inquire at our information center to learn more."
         	if (mOpened>= 6 && mOpened<=7){
             	totalSnorkTxt = mSnorkelTxt+snorkelDTxt;
                 saltMarshTxt = openSaltMarsh;
+                bugTxt = bugEnc;
+                rockWallTxt = rockOpen;
+                eyeOpPrice = eyeOpenSumm;
             }
             else{
+                eyeOpPrice = eyeOpenFree;
             	totalSnorkTxt = "Closed for the season."
                 saltMarshTxt = "Closed for the season."
+                rockWallTxt = "Closed for the season."
             }
         }
         else if (dOpened == 2){
         	penguinSelfieTxt = penguinWTxt;
             slsTxt = slsWTxt;
+            critterTxt = critterPhoto;
+            piranhaTxt = piranhaFeed;
+            sharkTxt = sharkTalk;
         	if (mOpened>= 6 && mOpened<=7){
             	totalSnorkTxt = snorkelTxt+snorkelDTxt;
                 saltMarshTxt = openSaltMarsh;
+                bugTxt = bugEnc;
+                rockWallTxt = rockOpen;
+                eyeOpPrice = eyeOpenSumm;
             }
             else{
+                eyeOpPrice = eyeOpenFree;
             	totalSnorkTxt = "Closed for the season."
                 saltMarshTxt = "Closed for the season."
+                rockWallTxt = "Closed for the season."
             }
         
         }
         else if (dOpened == 3){
         	penguinSelfieTxt = penguinWTxt;
             slsTxt = slsWTxt;
+            critterTxt = critterPhoto;
+            amazonTxt = amazonFeed;
+            sharkTxt = sharkTalk;
         	if (mOpened>= 6 && mOpened<=7){
             	totalSnorkTxt = snorkelTxt+snorkelDTxt;
                 saltMarshTxt = openSaltMarsh;
+                bugTxt = bugEnc;
+                rockWallTxt = rockOpen;
+                eyeOpPrice = eyeOpenSumm;
             }
             else{
+                eyeOpPrice = eyeOpenFree;
             	totalSnorkTxt = "Closed for the season."
                 saltMarshTxt = "Closed for the season."
+                rockWallTxt = "Closed for the season."
             }
         
         }
         else if (dOpened == 4){
         	penguinSelfieTxt = penguinWTxt;
             slsTxt = slsWTxt;
+            critterTxt = critterPhoto;
+            amazonTxt = amazonTalk;
+            sharkTxt = sharkFeed;
         	if (mOpened>= 6 && mOpened<=7){
             	totalSnorkTxt = pSnorkelTxt+snorkelDTxt;
                 saltMarshTxt = openSaltMarsh;
+                bugTxt = bugEnc;
+                rockWallTxt = rockOpen;
+                eyeOpPrice = eyeOpenSumm;
+                slsTxt = slsTxt+sleTxt;
             }
             else{
+                eyeOpPrice = eyeOpenFree;
             	totalSnorkTxt = "Closed for the season."
                 saltMarshTxt = "Closed for the season."
+                rockWallTxt = "Closed for the season."
             }
         
         }
         else if (dOpened == 5){
         	penguinSelfieTxt = penguinWTxt;
             slsTxt = slsWTxt;
+            critterTxt = creatureFeature;
+            piranhaTxt = piranhaFeed;
+            sharkTxt = sharkTalk;
+            coatiTxt = coatiConn;
         	if (mOpened>= 6 && mOpened<=7){
             	totalSnorkTxt = mSnorkelTxt+snorkelDTxt;
                 saltMarshTxt = openSaltMarsh;
+                bugTxt = bugEnc;
+                rockWallTxt = rockOpen;
+                eyeOpPrice = eyeOpenSumm;
             }
             else{
+                eyeOpPrice = eyeOpenFree;
             	totalSnorkTxt = "Closed for the season."
                 saltMarshTxt = "Closed for the season."
+                rockWallTxt = "Closed for the season."
             }
         
         }        
@@ -161,13 +281,12 @@
             }).addTo(map);
         archerFish.bindPopup("<b>Chichlids</b><br>Small schooling fish including Archer Fish")
         
-        //ADD CAPTION LATER
         var gulfStreamRider = L.circle([167, 334], {
         	fillOpacity:0,
             radius:6,
             stroke:false
             }).addTo(map);
-        gulfStreamRider.bindPopup("<b>Gulf Stream Rider</b><br>")
+        gulfStreamRider.bindPopup("<b>Gulf Stream Rider</b><br>Many species of fish seasonally travel up the Atlantic Gulf Stream and enter the waters around Long Island, and rarely these fish may become stuck in the cold winter waters here. These are some that our researchers have saved from this fate.")
         
         var amphibianAlley = L.circle([144, 353], {
         	fillOpacity: 0,
@@ -265,7 +384,7 @@
             radius:6,
             stroke:false
             }).addTo(map);
-        amazonRainforest.bindPopup("<b>Amazon Rainforest</b><br>See the diverse species of fish and turtles that live in the lush Amazon Rainforest!")
+        amazonRainforest.bindPopup("<b>Amazon Rainforest</b><br>"+amazonTxt+"See the diverse species of fish and turtles that live in the lush Amazon Rainforest!")
         
         var coralReef = L.circle([210, 520.5], {
         	fillOpacity:0,
@@ -356,14 +475,14 @@
             radius:6,
             stroke:false
             }).addTo(map);
-        seals.bindPopup("<b>Seals</b><br>Harbor and Grey seals welcome our visitors to the Long Island Aquarium.<br>Get up close and personal with the seals in a Seal encounter! Inquire at our information center for more info.")
+        seals.bindPopup("<b>Seals</b><br>Harbor and Grey seals welcome our visitors to the Long Island Aquarium.<br>Get up close and personal with the seals in a Seal encounter! Inquire at our information center to learn more.")
         
         var penguinPavillion = L.circle([313.25, 619], {
         	fillOpacity:0,
             radius:6,
             stroke:false
             }).addTo(map);
-       penguinPavillion.bindPopup("<b>Penguin Pavillion</b><br>Penguin Talk & Feed: 10:15 & 2:00<br>See the African Penguins as they walk and swim around their habitat. Get an up close and personal look at the penguins with the observation bubble!<br>Make your special day one to remember with a penguin selfie or encounter! Inquire at our information center.")
+       penguinPavillion.bindPopup("<b>Penguin Pavillion</b><br>Penguin Talk & Feed: 10:15 & 2:00<br>Make your special day one to remember with a penguin selfie or encounter! Inquire at our information center to learn more.")
        
        	var penguinEncounterRoom = L.circle([267.75, 609], {
        		fillOpacity:0,
@@ -377,7 +496,7 @@
             radius:6,
             stroke:false
             }).addTo(map);
-        seaLionCol.bindPopup("<b>Sea Lion Coliseum</b><br>Sea Lion Shows:"+slsTxt)
+        seaLionCol.bindPopup("<b>Sea Lion Coliseum</b><br>Sea Lion Shows:"+slsTxt+paintTxt)
         
         var reptileRuins = L.circle([318.25, 441.5], {
         	fillOpacity:0,
@@ -393,21 +512,19 @@
             }).addTo(map);
         koiPond.bindPopup("<b>Koi Pond</b><br>See many species of Koi, Japan's national fish. Grab some food from the vending machine close by to feed the fish yourself!")
         
-        //They might still do critter photos but idk????
         var critterCorner = L.circle([340.75, 434.5], {
         	fillOpacity:0,
             radius:6,
             stroke:false
             }).addTo(map);
-        critterCorner.bindPopup("<b>Critter Corner</b><br>Home to a variety of different exotic animals including an Albino Burmese Python, Red Tail Boa, and more!")
+        critterCorner.bindPopup("<b>Critter Corner</b><br>"+critterTxt+"Home to a variety of different exotic animals including an Albino Burmese Python, Red Tail Boa, and more!")
         
-        //I think these times are right, but they don't match the website????
         var otterFalls = L.circle([377, 406], {
         	fillOpacity:0,
             radius:6,
             stroke:false
             }).addTo(map);
-        otterFalls.bindPopup("<b>Otter Falls</b><br>Otter Talk and Feed: 1:30 & 3:30")
+        otterFalls.bindPopup("<b>Otter Falls</b><br>River Otter Lecture: 3:45")
         
         var tourBoat = L.circle([428.75, 471.25], {
         	fillOpacity:0,
@@ -421,22 +538,21 @@
             radius:6,
             stroke:false
             }).addTo(map);
-        eyeOpener.bindPopup("<b>Eye Opener</b><br>Climb on the Eye Opener with its rope bridges and twisting slides, and learn about the local environment of the Peconic River as well!<br>$12 per child (also grants access to unlimited Rock Wall climbs), tickets available at The Boathouse or front ticketing area.")
+        eyeOpener.bindPopup("<b>Eye Opener</b><br>Climb on the Eye Opener with its rope bridges and twisting slides, and learn about the local environment of the Peconic River as well!<br>"+eyeOpPrice)
         
         var rockWall = L.circle([431.5, 322], {
         	fillOpacity:0,
             radius:6,
             stroke:false
             }).addTo(map);
-        rockWall.bindPopup("<b>Rock Wall</b><br>Climb the rock wall and race to the top. Can you do it on the hardest side?<br>Tickets ($5 for 3 climbs, or $12 for unlimited climbs and access to the Eye Opener available at The Boathouse, Scoops Ice Cream, and the front ticketing area.")
+        rockWall.bindPopup("<b>Rock Wall</b><br>"+rockWallTxt)
         
-        //They might do creature feature still idk?????
         var critterCove = L.circle([349.25, 345], {
         	fillOpacity:0,
             radius:6,
             stroke:false
             }).addTo(map);
-        critterCove.bindPopup("<b>Critter Cove</b><br>Home of Lavender Brown, the Barred Owl")
+        critterCove.bindPopup("<b>Critter Cove</b><br>"+critterTxt+"Home of Lavender Brown, the Barred Owl")
         
         var barredOwl = L.circle([325.25, 328.25], {
         	fillOpacity:0,
@@ -472,7 +588,7 @@
             radius:6,
             stroke:false
             }).addTo(map);
-        porcupines.bindPopup("<b>Porcupines</b><br>Watch the prehensile tailed porcupines as they climb around their dark habitat. Be careful not to disturb them with any bright lights!")
+        porcupines.bindPopup("<b>Porcupines</b><br>Watch the prehensile tailed porcupines as they climb around their dark habitat. Be careful not to disturb them with any bright lights!"+porcupineTxt)
         
         var jjMiningCo = L.circle([325, 398.25], {
         	fillOpacity:0,
@@ -504,9 +620,9 @@
             radius:6,
             stroke:false
             }).addTo(map);
-        bugs1.bindPopup("<b>Bugs</b><br>A variety of exotic bugs from around the world of various species.")
-        bugs2.bindPopup("<b>Bugs</b><br>A variety of exotic bugs from around the world of various species.")
-        bugs3.bindPopup("<b>Bugs</b><br>A variety of exotic bugs from around the world of various species.")
+        bugs1.bindPopup("<b>Bugs</b>"+bugTxt+"<br>A variety of exotic bugs from around the world of various species.")
+        bugs2.bindPopup("<b>Bugs</b>"+bugTxt+"<br>A variety of exotic bugs from around the world of various species.")
+        bugs3.bindPopup("<b>Bugs</b>"+bugTxt+"<br>A variety of exotic bugs from around the world of various species.")
         
         var butterflies = L.circle([163, 199], {
         	fillOpacity:0,
@@ -548,9 +664,16 @@
         var informationCenter = L.circle([91.25, 357.25], {
         	fillOpacity:0,
             radius:6,
-            stroke:false,
+            stroke:false
             }).addTo(map);
         informationCenter.bindPopup("<b>Information Center</b><br>Get information about events, exhibits, and more here.")
+
+        var coatis = L.circle([314.5, 341], {
+            fillOpacity:0,
+            radius:6,
+            stroke:false
+            }).addTo(map);
+        coatis.bindPopup("<b>White Nosed Coatis</b><br>See the two Coati Brothers: Milo and Otis, as they climb around and explore their habitat!"+coatiTxt)
         
         
 
@@ -559,7 +682,7 @@
     		.setContent("<b>Main Entrance</b><br>Welcome to the Long Island Aquarium!<br>Click on any colored circles to learn more about our exhibits!")
     		.openOn(map);
 
-        sharkTank.bindPopup("<b>Lost City of Atlantis Shark Exhibit</b><p>Shark Tank Talk (Feed M Th Sa) 3:00</p>")
+        sharkTank.bindPopup("<b>Lost City of Atlantis Shark Exhibit</b><br>Shark Tank"+sharkTxt)
 
         snorkelTank.bindPopup("<b>Shark Reef Lagoon</b><br>"+totalSnorkTxt);
     </script>
