@@ -108,7 +108,6 @@
         if(dOpened == 0){
             penguinSelfieTxt = penguinWENDTxt;
             slsTxt = slsWTxt+slsWENDTxt;
-            critterTxt = creatureFeature;
             amazonTxt = amazonFeed;
             sharkTxt = sharkTalk;
             sharkTxt = sharkTxt+sharkDive;
@@ -120,6 +119,7 @@
             	totalSnorkTxt = snorkelTxt+snorkelDTxt+snorkelWTxt;
 				saltMarshTxt = openSaltMarsh;
                 rockWallTxt = rockOpen;
+                critterTxt = creatureFeature;
             }
             else{
             	totalSnorkTxt = "Closed for the season."
@@ -130,7 +130,6 @@
         else if(dOpened == 6){
             penguinSelfieTxt = penguinWENDTxt;
             slsTxt = slsWTxt+slsWENDTxt;
-            critterTxt = creatureFeature;
             amazonTxt = amazonTalk;
             sharkTxt = sharkFeed;
             sharkTxt = sharkTxt+sharkDive;
@@ -140,6 +139,7 @@
             	totalSnorkTxt = snorkelTxt+snorkelDTxt+snorkelWTxt;
 				saltMarshTxt = openSaltMarsh;
                 rockWallTxt = rockOpen;
+                critterTxt = creatureFeature;
             }
             else{
             	totalSnorkTxt = "Closed for the season."
@@ -150,7 +150,6 @@
         else if (dOpened == 1){
         	penguinSelfieTxt = penguinWTxt;
             slsTxt = slsWTxt;
-            critterTxt = critterPhoto;
             amazonTxt = amazonTalk;
             sharkTxt = sharkFeed;
             sharkTxt = sharkTxt+sharkDive;
@@ -162,6 +161,7 @@
                 bugTxt = bugEnc;
                 rockWallTxt = rockOpen;
                 eyeOpPrice = eyeOpenSumm;
+                critterTxt = critterPhoto;
             }
             else{
                 eyeOpPrice = eyeOpenFree;
@@ -173,7 +173,6 @@
         else if (dOpened == 2){
         	penguinSelfieTxt = penguinWTxt;
             slsTxt = slsWTxt;
-            critterTxt = critterPhoto;
             piranhaTxt = piranhaFeed;
             sharkTxt = sharkTalk;
         	if (mOpened>= 6 && mOpened<=7){
@@ -183,6 +182,7 @@
                 rockWallTxt = rockOpen;
                 eyeOpPrice = eyeOpenSumm;
                 sharkTxt = sharkTxt+sharkDive;
+                critterTxt = critterPhoto;
             }
             else{
                 eyeOpPrice = eyeOpenFree;
@@ -195,7 +195,6 @@
         else if (dOpened == 3){
         	penguinSelfieTxt = penguinWTxt;
             slsTxt = slsWTxt;
-            critterTxt = critterPhoto;
             amazonTxt = amazonFeed;
             sharkTxt = sharkTalk;
         	if (mOpened>= 6 && mOpened<=7){
@@ -205,6 +204,7 @@
                 rockWallTxt = rockOpen;
                 eyeOpPrice = eyeOpenSumm;
                 sharkTxt = sharkTxt+sharkDive;
+                critterTxt = critterPhoto;
             }
             else{
                 eyeOpPrice = eyeOpenFree;
@@ -217,7 +217,6 @@
         else if (dOpened == 4){
         	penguinSelfieTxt = penguinWTxt;
             slsTxt = slsWTxt;
-            critterTxt = critterPhoto;
             amazonTxt = amazonTalk;
             sharkTxt = sharkFeed;
             sharkTxt = sharkTxt+sharkDive;
@@ -228,6 +227,7 @@
                 rockWallTxt = rockOpen;
                 eyeOpPrice = eyeOpenSumm;
                 slsTxt = slsTxt+sleTxt;
+                critterTxt = critterPhoto;
             }
             else{
                 eyeOpPrice = eyeOpenFree;
@@ -240,7 +240,6 @@
         else if (dOpened == 5){
         	penguinSelfieTxt = penguinWTxt;
             slsTxt = slsWTxt;
-            critterTxt = creatureFeature;
             piranhaTxt = piranhaFeed;
             sharkTxt = sharkTalk;
             sharkTxt = sharkTxt+sharkDive;
@@ -251,6 +250,7 @@
                 bugTxt = bugEnc;
                 rockWallTxt = rockOpen;
                 eyeOpPrice = eyeOpenSumm;
+                critterTxt = creatureFeature;
             }
             else{
                 eyeOpPrice = eyeOpenFree;
@@ -261,7 +261,7 @@
         
         }        
         
-		//Popups for each exhibit's bubble
+		//Popups for each habitat's bubble
         var sharkTank = L.circle([163, 588], {
             fillOpacity: 0,
             radius: 34.5,
@@ -603,15 +603,14 @@
             radius:6,
             stroke:false
             }).addTo(map);
-        jjMiningCo.bindPopup("<b>J&J Mining Co.</b><br>Sift through some sand and become an archaeologist as you search for treasures buried deep.")
+        jjMiningCo.bindPopup("<b>J&J Mining Co.</b><br>Sift through sand and become an archaeologist as you search for treasures buried deep.")
         
-        //ADD DESCR LATER
         var butterflyLab = L.circle([139, 244], {
         	fillOpacity:0,
             radius:6,
             stroke:false
             }).addTo(map);
-        butterflyLab.bindPopup("<b>Butterfly Lab</b><br>")
+        butterflyLab.bindPopup("<b>Butterfly Lab</b><br>Here our Entymologists hatch butterflies and other bugs they recieve from all around the world and study them.")
         
         var bugs1 = L.circle([168.25, 234.25], {
         	fillOpacity:0,
@@ -674,7 +673,7 @@
             radius:6,
             stroke:false
             }).addTo(map);
-        informationCenter.bindPopup("<b>Information Center</b><br>Get information about events, exhibits, and more here.")
+        informationCenter.bindPopup("<b>Information Center</b><br>Get information about events, habitats, and more here.")
 
         var coatis = L.circle([314.5, 341], {
             fillOpacity:0,
@@ -687,10 +686,10 @@
 
 		var entranceMark = L.popup()
     		.setLatLng([100, 340])
-    		.setContent("<b>Main Entrance</b><br>Welcome to the Long Island Aquarium!<br>Click on any colored circles to learn more about our exhibits!")
+    		.setContent("<b>Main Entrance</b><br>Welcome to the Long Island Aquarium!<br>Click on any colored circles to learn more about our habitats!")
     		.openOn(map);
 
-        sharkTank.bindPopup("<b>Lost City of Atlantis Shark Exhibit</b><br>Shark Tank"+sharkTxt)
+        sharkTank.bindPopup("<b>Lost City of Atlantis Shark Habitat</b><br>Shark Tank"+sharkTxt)
 
         snorkelTank.bindPopup("<b>Shark Reef Lagoon</b><br>"+totalSnorkTxt);
     </script>
