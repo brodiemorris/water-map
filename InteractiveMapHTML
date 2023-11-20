@@ -46,7 +46,7 @@
         var penguinSelfieTxt = "";
         
         //Sea Lion Show Text
-        var slsWTxt = " 10:30, 12:30, 2:30";
+        var slsWTxt = "10:30, 12:30, 2:30";
         var slsWENDTxt =", 4:00";
         var slsTxt = "";
         var sleTxt = "<br>($) Sea Lion Encounter: 10:00. Inquire at our information center to learn more."
@@ -273,7 +273,7 @@
             radius: 6,
             stroke: false
         }).addTo(map);
-        rayBay.bindPopup("<b>Ray Bay</b><br>Ray Bay talk and feed: 11:30<br>An interactive touch tank with many species of rays! Food avaiable ($3) at ticketing or Posiedon's Crafts.")
+        rayBay.bindPopup("<b>Ray Bay</b><br>Ray Bay talk and feed: 11:30<br>An interactive touch tank with many species of rays! Food available  ($3) at ticketing or Posiedon's Crafts.")
         
         var mangroveMonitor = L.circle([94.5, 274], {
         	fillOpacity: 0,
@@ -287,7 +287,7 @@
             radius: 6,
             stroke: false
             }).addTo(map);
-        archerFish.bindPopup("<b>Chichlids</b><br>Small schooling fish including Archer Fish")
+        archerFish.bindPopup("<b>Cichlids</b><br>Small schooling fish including Archer Fish")
         
         var gulfStreamRider = L.circle([167, 334], {
         	fillOpacity:0,
@@ -315,7 +315,7 @@
             radius: 6,
             stroke: false
             }).addTo(map);
-        lagoon.bindPopup("<b>The Lagoon</b><br>Lagoon Lecture: 1:30<br>See many different species of fish from all across long island!<br>Food ($3) available at ticketing or Posiedon's Crafts.")
+        lagoon.bindPopup("<b>The Lagoon</b><br>Lagoon Lecture: 1:30<br>See many different species of fish from all across Long Island!<br>Food ($3) available at ticketing or Posiedon's Crafts.")
         
         var tidalMarsh = L.circle([156, 422], {
         	fillOpacity:0,
@@ -329,14 +329,14 @@
             radius: 6,
             stroke: false
             }).addTo(map);
-        crabVilla.bindPopup("<b>Crab Villa</b><br>Home to many species of crustacean including the Japenese Spider Crab.")
+        crabVilla.bindPopup("<b>Crab Villa</b><br>Home to many species of crustacean including the Japanese Spider Crab.")
         
         var jellyfish = L.circle([168.5, 474.5], {
         	fillOpacity:0,
             radius: 6,
             stroke: false
             }).addTo(map);
-        jellyfish.bindPopup("<b>Jellyfish</b><br>See the mezmerizing Moon Jellyfish in all their glory!")
+        jellyfish.bindPopup("<b>Jellyfish</b><br>See the mesmerizing Moon Jellyfish in all their glory!")
         
         var shipwreckTouchTank = L.circle([145.5, 477], {
         	fillOpacity:0,
@@ -371,7 +371,7 @@
             radius:6,
             stroke:false
             }).addTo(map);
-        shipwreck.bindPopup("<b>Shipreck/Artificial Reef</b><br>See many species of fish commonly found in or around shipwrecks in the wild.")
+        shipwreck.bindPopup("<b>Shipwreck/Artificial Reef</b><br>See many species of fish commonly found in or around shipwrecks in the wild.")
         
         var discusFish = L.circle([103.5, 567.5], {
         	fillOpacity:0,
@@ -420,7 +420,7 @@
             radius:6,
             stroke:false
             }).addTo(map);
-        flounderFind.bindPopup("<b>Flounder Find</b><br>Try and find the flounders as they camoflougue against the sand. Can you find them all?")
+        flounderFind.bindPopup("<b>Flounder Find</b><br>Try and find the flounders as they camouflage against the sand. Can you find them all?")
         
         var cuttlefish = L.circle([164.5, 498.75], {
         	fillOpacity:0,
@@ -539,7 +539,7 @@
             radius:6,
             stroke:false
             }).addTo(map);
-        tourBoat.bindPopup("<b>Atlantis Explorer Tour boat</b><br>Take a ride down the Peconic River on the Tour Boat! Tickets available at The Boathouse or front ticketing area.")
+        tourBoat.bindPopup("<b>Atlantis Explorer Tour Boat</b><br>Take a ride down the Peconic River on the Tour Boat! Tickets available at The Boathouse or front ticketing area.")
         
         var eyeOpener = L.circle([410, 368.25], {
         	fillOpacity:0,
@@ -560,7 +560,7 @@
             radius:6,
             stroke:false
             }).addTo(map);
-        critterCove.bindPopup("<b>Critter Cove</b><br>"+critterTxt+"Home of Lavender Brown, the Barred Owl")
+        critterCove.bindPopup("<b>Critter Cove</b><br>"+critterTxt+"Home of Lavender Brown, the Barred Owl.")
         
         var barredOwl = L.circle([325.25, 328.25], {
         	fillOpacity:0,
@@ -610,7 +610,7 @@
             radius:6,
             stroke:false
             }).addTo(map);
-        butterflyLab.bindPopup("<b>Butterfly Lab</b><br>Here our Entymologists hatch butterflies and other bugs they recieve from all around the world and study them.")
+        butterflyLab.bindPopup("<b>Butterfly Lab</b><br>Here our Entomologists hatch butterflies and other bugs they receive from all around the world and study them.")
         
         var bugs1 = L.circle([168.25, 234.25], {
         	fillOpacity:0,
